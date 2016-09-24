@@ -1,0 +1,13 @@
+{
+  "name": "peter_paul_collab",
+  "main": "bundle.js",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "start": "watchify -o bundle.js -v -d myApp.js"
+  }
+}
