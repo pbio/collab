@@ -2,6 +2,11 @@
   "name": "peter_paul_collab",
   "main": "bundle.js",
   "devDependencies": {
+    "babel-core": "^5.2.17",
+    "babel-loader": "^5.0.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
@@ -9,5 +14,18 @@
   },
   "scripts": {
     "start": "watchify -o bundle.js -v -d myApp.js"
+  },
+   "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "react",
+            "es2015"
+          ]
+        }
+      ]
+    ]
   }
 }
